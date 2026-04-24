@@ -1,0 +1,14 @@
+# Evergarden Fall Green
+
+[colors]
+foreground = "#f8f9e8"
+background = "#232a2e"
+cursor_bg = "#cbe3b3"
+cursor_border = "#cbe3b3"
+cursor_fg = "#171c1f"
+selection_bg = "#374145"
+selection_fg = "#f8f9e8"
+
+ansi = ["#232a2e","#f57f82","#cbe3b3","#f5d098","#b2caed","#f3c0e5","#b3e3ca","#f8f9e8"]
+brights = ["#2b3337","#f57f82","#cbe3b3","#f5d098","#b2caed","#f3c0e5","#b3e3ca","#96b4aa"]
+

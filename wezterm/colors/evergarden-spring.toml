@@ -1,0 +1,57 @@
+# Evergarden Spring Green
+
+[colors]
+foreground = "#f8f9e8"
+background = "#2b3438"
+cursor_bg = "#cbe3b3"
+cursor_border = "#cbe3b3"
+cursor_fg = "#1c2225"
+selection_bg = "#3e4a4f"
+selection_fg = "#f8f9e8"
+
+ansi = ["#2b3438","#f57f82","#cbe3b3","#f5d098","#b2caed","#f3c0e5","#b3e3ca","#f8f9e8"]
+brights = ["#343e43","#f57f82","#cbe3b3","#f5d098","#b2caed","#f3c0e5","#b3e3ca","#96b4aa"]
+
+[colors.tab_bar]
+background = '#2b3438'
+
+[colors.tab_bar.active_tab]
+bg_color = '#58686d'
+fg_color = '#f8f9e8'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab]
+bg_color = "#313b40"
+fg_color = "#96b4aa"
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#58686d"
+fg_color = "#f8f9e8"
+intensity = 'Normal'
+italic = true
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab]
+bg_color = "#2b3438"
+fg_color = "#96b4aa"
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab_hover]
+bg_color = "#58686d"
+fg_color = "#f8f9e8"
+intensity = 'Normal'
+italic = true
+strikethrough = false
+underline = 'None'
+
