@@ -4,6 +4,7 @@ local config = wezterm.config_builder()
 
 config.initial_cols = 120
 config.initial_rows = 28
+config.max_fps = 120
 
 config.font = wezterm.font("0xProto Nerd Font")
 config.font_size = 12
@@ -46,6 +47,11 @@ end)
 
 config.leader = { key = "a", mods = "ALT" }
 config.keys = {
+	{
+		mods = "LEADER",
+		key = "w",
+		action = wezterm.action.SpawnCommandInNewWindow,
+	},
 	{
 		mods = "LEADER",
 		key = "c",
