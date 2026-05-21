@@ -19,7 +19,7 @@
 	},
 	"mouse_follows_focus": true,
 	"transparency": true,
-	"transparency_alpha": 220,
+	"transparency_alpha": 230,
 	"animation": {
 		"enabled": true,
 		"duration": 400,
