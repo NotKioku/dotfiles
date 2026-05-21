@@ -1,31 +1,4 @@
 :root {
-    /* --rosewater: #f5e0dc; */
-    /* --flamingo: #f2cdcd; */
-    /* --pink: #f5c2e7; */
-    /* --mauve: #cba6f7; */
-    /* --red: #f38ba8; */
-    /* --maroon: #eba0ac; */
-    /* --peach: #fab387; */
-    /* --yellow: #f9e2af; */
-    /* --green: #a6e3a1; */
-    /* --teal: #94e2d5; */
-    /* --sky: #89dceb; */
-    /* --sapphire: #74c7ec; */
-    /* --blue: #89b4fa; */
-    /* --lavender: #b4befe; */
-    /* --text: #cdd6f4; */
-    /* --subtext1: #bac2de; */
-    /* --subtext0: #a6adc8; */
-    /* --overlay2: #9399b2; */
-    /* --overlay1: #7f849c; */
-    /* --overlay0: #6c7086; */
-    /* --surface2: #585b70; */
-    /* --surface1: #45475a; */
-    /* --surface0: #282936; */
-    /* --base: #1e1e2e; */
-    /* --mantle: rgba(24, 24, 37, 0.5); */
-    /* --crust: rgba(17, 17, 27, 0.5); */
-
 	--rosewater: #ea6962;
 	--flamingo:  #ea6962;
 	--red: #ea6962;
@@ -51,9 +24,10 @@
 	--surface0: #292929;
 	--base: #1d2021;
 	--mantle: #191b1c;
-	--crust: #141617;
+	/* --crust: #141617; */
+	--crust: rgba(20, 22, 23, 0.5);
 }
-*{
+* {
 	font-size: 12px;
 	color: var(--subtext0);
 	font-weight: 600;
@@ -64,7 +38,7 @@
 .yasb-bar {
 	padding: 0;
 	margin: 0; 
-    background-color: var(--crust)
+    background-color: var(--crust);
 }
 .widget {
 	padding: 0 12px;
@@ -76,7 +50,6 @@
 .widget .label {
 	padding: 0px 2px; 
 }
-
 .apps-widget {
 	padding: 0 4px 0 2px;
 }
@@ -89,7 +62,7 @@
 }
 .apps-widget .widget-container,
 .komorebi-workspaces .widget-container,
-.komorebi-active-layout .widget-container{
+.komorebi-active-layout .widget-container {
 	background-color: var(--crust);
 	margin: 4px 0 4px 0;
 	border-radius: 12px;
@@ -110,14 +83,14 @@
     color: var(--surface2);
     font-size: 12px;
     padding: 0 0 0 4px;
-    font-weight:600;
+    font-weight: 600;
 }
 .komorebi-workspaces .ws-btn {
     border: none;
-    background-color:transparent;
-	margin:0;
+    background-color: transparent;
+	margin: 0;
     font-size: 12px;
-	color:  var(--overlay1);
+	color: var(--overlay1);
     height: 28px;
     width: 18px;
 }
@@ -125,7 +98,7 @@
     color: var(--subtext1);
 }
 .komorebi-workspaces .ws-btn.populated {
-    color:transparent;
+    color: transparent;
     width: 10px;
     height: 10px;
     background-color: var(--lavender);
@@ -157,11 +130,11 @@
  
 }
 .power-menu-widget .label {
-	color: #f38ba8;
+	color: var(--pink);
 	font-size: 13px;
 }
 .power-menu-popup {
-	background-color: transparent	 
+	background-color: transparent;
 }
 .power-menu-popup .button {
 	padding: 0;
@@ -169,7 +142,7 @@
 	height: 230px;
 	border-radius: 8px;
 	background-color: var(--base);
-	color:var(--text);
+	color: var(--text);
 	border-left: 4px solid rgba(58, 59, 83, 0);
     border-right: 4px solid rgba(58, 59, 83, 0);
     border-top: 8px solid rgba(58, 59, 83, 0);
@@ -177,7 +150,7 @@
 	margin: 0px;
 }
 .power-menu-popup .button.hover {
-	background-color:var(--surface0);
+	background-color: var(--surface0);
 	border-left: 4px solid var(--surface0);
     border-right: 4px solid var(--surface0);
     border-top: 8px solid var(--surface0);
@@ -187,13 +160,13 @@
 	margin-bottom: 8px;
 	font-size: 16px;
 	font-weight: 500;
-	color: var(--surface2)
+	color: var(--surface2);
  
 }
 .power-menu-popup .button .icon {
 	font-size: 64px;
 	padding-top: 32px;
-	color: var(--surface2)
+	color: var(--surface2);
 }
 .power-menu-popup .button.cancel .icon {
     padding: 0;
@@ -213,7 +186,7 @@
 }
 .github-widget .icon {
     font-size: 14px;
-	color: var(--text)
+	color: var(--text);
 }
 .github-widget .icon.new-notification {
     color: var(--red);
@@ -221,7 +194,7 @@
 .weather-widget,
 .github-widget,
 .volume-widget {
-    padding:0 6px;
+    padding: 0 6px;
 }
 .weather-widget .icon {
 	font-size: 18px;
@@ -232,8 +205,7 @@
 	padding: 0 4px 0 4px;
     margin: 0;
 }
-.ai-widget .widget-container
- {
+.ai-widget .widget-container {
  	margin: 4px 0 4px 0;
 	border-radius: 12px;
 }
@@ -246,16 +218,16 @@
 .ai-widget .icon:hover {
 	color: #fff;
 }
-.taskbar-widget{
+.taskbar-widget {
     padding: 0;
     margin: 0;
     border: none;
 }
-.taskbar-widget .widget-container{
+.taskbar-widget .widget-container {
     padding: 0 8px;
 }
-.taskbar-widget .app-container{
-    padding:0 6px;
+.taskbar-widget .app-container {
+    padding: 0 6px;
     border: none;
     margin: 0;
 }
@@ -283,17 +255,17 @@
     margin: 0;
 }
 .wallpapers-gallery-buttons {
-    background-color:rgba(255, 255, 255, 0);
-    color:var(--text);
+    background-color: rgba(255, 255, 255, 0);
+    color: var(--text);
     border: none;
     font-size: 14px;
     padding: 8px 0;
     border-radius: 8px;
-    margin:0 8px 8px 8px;
+    margin: 0 8px 8px 8px;
     width: 600px;
 }
 .wallpapers-gallery-buttons:hover {
-    background-color:rgba(255, 255, 255, 0.1)
+    background-color: rgba(255, 255, 255, 0.1);
 }
 .wallpapers-gallery-image {
     border: 4px solid transparent;
@@ -306,7 +278,6 @@
 .wallpapers-gallery-image.focused {
     border: 4px solid var(--sapphire);
 }
-
 .update-check-widget {
     padding: 0 0px 0 0px;
 }
@@ -338,8 +309,8 @@
     font-weight: 900;
     font-size: 14px;
 }
-.github-menu    {
-    background-color:  rgba(17, 17, 27, 0.2);
+.github-menu {
+    background-color: rgba(17, 17, 27, 0.2);
     max-height: 500px;
     min-height: 500px;
     min-width: 420px;
@@ -358,11 +329,11 @@
     font-size: 12px;
     padding: 4px 8px 6px 8px;
     font-family: 'Segoe UI';
-    color: #9399b2;
+    color: var(--overlay2);
     background-color: rgba(17, 17, 27, 0.75);
 }
 .github-menu .contents {
-    background-color:  rgba(17, 17, 27, 0.2);
+    background-color: rgba(17, 17, 27, 0.2);
 }
 .github-menu .contents .item {
     min-height: 40px;
@@ -375,8 +346,8 @@
 }
 .github-menu .contents .item .title,
 .github-menu .contents .item .description {
-    color: #9399b2;
-    font-family: Segoe UI;
+    color: var(--overlay2);
+    font-family: 'Segoe UI';
 }
 .github-menu .contents .item .title {
     font-size: 14px;
@@ -384,29 +355,29 @@
 }
 .github-menu .contents .item .description {
     font-size: 12px;
-    font-weight: 500
+    font-weight: 500;
 }
 .github-menu .contents .item.new .title,
 .github-menu .contents .item.new .description {
-    color: #ffffff
+    color: #ffffff;
 }
 .github-menu .contents .item .icon {
     font-size: 16px;
     padding-right: 0;
     padding-left: 8px;
     padding-right: 4px;
-    color: #9399b2;
+    color: var(--overlay2);
 }
 .github-menu .contents .item.new .icon {
     color: #3fb950;
 }
 .calendar {
-    background-color: rgba(17, 17, 27, 0.4);
+    background-color: rgba(20, 22, 23, 0.4);
 }
 .calendar .calendar-table,
 .calendar .calendar-table::item {
-    background-color: rgba(17, 17, 27, 0);
-    color: rgba(162, 177, 196, 0.85);
+    background-color: rgba(20, 22, 23, 0);
+    color: rgba(235, 219, 178, 0.85);
     font-family: 'Segoe UI';
     margin: 0;
     padding: 0;
@@ -415,7 +386,7 @@
 }
 .calendar .calendar-table::item:selected {
     color: rgb(255, 255, 255);
-    background-color: #007acc;
+    background-color: var(--blue);
     border-radius: 10px;
 }
 .calendar .day-label {
@@ -428,7 +399,7 @@
 .calendar .holiday-label {
     font-family: 'Segoe UI';
     font-size: 16px;
-    color: #fff;
+    color: var(--text);
     font-weight: 700;
     min-width: 180px;
     max-width: 180px;
@@ -437,10 +408,10 @@
 .calendar .holiday-label {
     font-size: 12px;
     font-weight: 600;
-    color: rgba(162, 177, 196, 0.85);
+    color: rgba(235, 219, 178, 0.85);
 }
 .calendar .holiday-label {
-    color: rgba(162, 177, 196, 0.85);
+    color: rgba(235, 219, 178, 0.85);
     font-weight: 700;
 }
 .calendar .month-label {
@@ -449,6 +420,6 @@
 .calendar .date-label {
     font-size: 88px;
     font-weight: 900;
-    color: rgb(255, 255, 255);
+    color: var(--text);
     margin-top: -20px;
 }
