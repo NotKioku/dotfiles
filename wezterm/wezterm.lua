@@ -49,13 +49,13 @@ config.leader = { key = "a", mods = "ALT" }
 config.keys = {
 	{
 		mods = "LEADER",
-		key = "w",
-		action = wezterm.action.SpawnCommandInNewWindow,
+		key = "t",
+		action = wezterm.action.SpawnTab("CurrentPaneDomain"),
 	},
 	{
 		mods = "LEADER",
 		key = "c",
-		action = wezterm.action.SpawnTab("CurrentPaneDomain"),
+		action = wezterm.action.SpawnCommandInNewWindow,
 	},
 	{
 		mods = "LEADER",
@@ -126,6 +126,19 @@ config.keys = {
 		mods = "LEADER",
 		key = "f",
 		action = wezterm.action.ToggleFullScreen,
+	},
+	{
+		mods = "LEADER",
+		key = "o",
+		action = wezterm.action_callback(function(window, _)
+			local overrides = window:get_config_overrides() or {}
+			if overrides.window_background_opacity == 1.0 then
+				overrides.window_background_opacity = 0.9
+			else
+				overrides.window_background_opacity = 1.0
+			end
+			window:set_config_overrides(overrides)
+		end),
 	},
 }
 
