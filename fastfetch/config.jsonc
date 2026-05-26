@@ -56,7 +56,8 @@
 		},
 		{
 			"type": "terminalfont",
-			"key": "󰛖",
+			// "key": "",
+			"key": "font",
 			"keyColor": "blue"
 		},
 		{
