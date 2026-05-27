@@ -31,10 +31,8 @@ bars:
       bottom: 0
       right: 6
     widgets:
-      left: ["komorebi_workspaces","active_window"]
-      # center: ["clock","apps"]
+      left: ["komorebi_workspaces"]
       center: ["clock"]
-      # right: ["update","ai","wallpapers","github","taskbar","weather","whkd","volume","power_menu"]
       right: ["taskbar","weather","language","wifi","volume","battery","power_menu"]
 widgets:
   update:
@@ -137,19 +135,6 @@ widgets:
         snowyNight: "\udb81\udd99"
         blizzardDay: "\udb81\udd99"
         default: "\udb81\udd99"
-  # volume:
-  #   type: "yasb.volume.VolumeWidget"
-  #   options:
-  #     label: "<span>{icon}</span> {level}"
-  #     label_alt: "{volume}"
-  #     volume_icons:
-  #       - "\ueee8"
-  #       - "\uf026"
-  #       - "\uf027"
-  #       - "\uf027"
-  #       - "\uf028"
-  #     callbacks:
-  #       on_right: "exec cmd.exe /c start ms-settings:sound"
   volume:
     type: "yasb.volume.VolumeWidget"
     options:
@@ -358,16 +343,16 @@ widgets:
           offset_top: 6
           offset_left: 0
           wifi_icons_secured: [
-            "\ue670",
-            "\ue671",
-            "\ue672",
-            "\ue673",
+            "\udb82\udd21",
+            "\udb82\udd24",
+            "\udb82\udd27",
+            "\udb82\udd2a",
           ]
           wifi_icons_unsecured: [
-            "\uec3c",
-            "\uec3d",
-            "\uec3e",
-            "\uec3f",
+            "\udb82\udd1f",
+            "\udb82\udd22",
+            "\udb82\udd25",
+            "\udb82\udd28",
           ]
         callbacks:
           on_left: "toggle_menu"
@@ -379,9 +364,9 @@ widgets:
           bottom: 0
           right: 8
         wifi_icons: [
-          "\udb82\udd2e",  # Icon for 0% strength
-          "\udb82\udd1f",  # Icon for 1-20% strength
-          "\udb82\udd22",  # Icon for 21-40% strength
-          "\udb82\udd25",  # Icon for 41-80% strength
-          "\udb82\udd28"   # Icon for 81-100% strength
+          "\udb82\udd2e",  # Icon for 0% strength 󰤮
+          "\udb82\udd1f",  # Icon for 1-20% strength 󰤟
+          "\udb82\udd22",  # Icon for 21-40% strength 󰤢
+          "\udb82\udd25",  # Icon for 41-80% strength 󰤥
+          "\udb82\udd28"   # Icon for 81-100% strength 󰤨
         ]
