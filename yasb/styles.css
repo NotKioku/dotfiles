@@ -805,3 +805,36 @@
     font-size: 12px;
 	color: var(--subtext0);
 }
+.systray{
+	padding-right: 8px;
+    border: none;
+    background-color: transparent;
+    border-radius: 12px;
+}
+.systray .pinned-container {
+    background: transparent;
+}
+.systray .pinned-container[forceshow=true] {
+    background: var(--overlay0);
+}
+.systray .button {
+    border-radius: 4px;
+	background: rgba(0, 0, 0, 0.01);
+    padding: 6px 3px;
+}
+.systray .button:hover {
+    background-color: rgba(168, 168, 168, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+}
+.systray .button[dragging=true] {
+    border-color: var(--main);
+}
+.systray .unpinned-visibility-btn {
+    border-radius: 4px;
+    height: 20px;
+    width: 16px;
+}
+.systray .unpinned-visibility-btn:hover {
+	color: var(--blue);
+}

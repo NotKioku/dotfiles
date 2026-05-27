@@ -31,9 +31,9 @@ bars:
       bottom: 0
       right: 6
     widgets:
-      left: ["komorebi_workspaces"]
-      center: ["clock"]
-      right: ["taskbar","weather","language","wifi","volume","battery","power_menu"]
+      left: ["komorebi_workspaces", "taskbar"]
+      center: ["clock", "weather"]
+      right: ["systray","language","wifi","volume","battery","power_menu"]
 widgets:
   update:
     type: "yasb.update_check.UpdateCheckWidget"
@@ -370,3 +370,28 @@ widgets:
           "\udb82\udd25",  # Icon for 41-80% strength 󰤥
           "\udb82\udd28"   # Icon for 81-100% strength 󰤨
         ]
+  systray:
+    type: "yasb.systray.SystrayWidget"
+    options:
+      class_name: "systray"
+      label_collapsed: "\uf138"
+      label_expanded: "\uf137"
+      label_position: "left" # Can be "left" or "right"
+      icon_size: 15 # Can be any integer between 8 and 64
+      pin_click_modifier: "alt" # Can be "ctrl", "alt" or "shift"
+      #show_unpinned: false
+      show_unpinned: false
+      show_unpinned_button: true
+      show_battery: false
+      show_volume: false
+      show_network: false
+      btn_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [ 1, 1 ]
+      unpinned_vis_btn_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [ 1, 1 ]
