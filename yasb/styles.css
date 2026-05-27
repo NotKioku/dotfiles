@@ -180,10 +180,6 @@
     height: 32px;
     border-radius: 4px;
 }
-.volume-widget .icon {
-	color: var(--blue);
-	margin: 1px 2px 0 0;
-}
 .github-widget .icon {
     font-size: 14px;
 	color: var(--text);
@@ -193,7 +189,10 @@
 }
 .weather-widget,
 .github-widget,
-.volume-widget {
+.volume-widget,
+.wifi-widget,
+.language-widget,
+.battery-widget {
     padding: 0 6px;
 }
 .weather-widget .icon {
@@ -422,4 +421,388 @@
     font-weight: 900;
     color: var(--text);
     margin-top: -20px;
+}
+.context-menu {
+    padding: 4px 4px;
+	background-color: rgba(20, 22, 23, 0.6);
+    border-radius: 9px;
+}
+.context-menu::icon:checked {
+	width: 0px;
+	height: 0px;
+}
+.context-menu::item:selected {
+    background-color: rgba(20, 22, 23, 0.3);
+	color: var(--text);
+}
+.menu-checkbox {
+	color: var(--main);
+    background-color: rgba(20, 22, 23, 0.6);
+}
+.menu-checkbox:hover {
+	background-color: rgba(20, 22, 23, 0.3);
+	color: var(--mainLight);
+}
+.context-menu::item,
+.context-menu .menu-checkbox {
+	border: none;
+    background-color: transparent;
+    padding: 6px 12px;
+    margin: 2px 6px;
+    border-radius: 6px;
+    min-width: 100px;
+}
+.context-menu .menu-checkbox .checkbox {
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.context-menu .menu-checkbox:hover{
+	color: var(--mainLight);
+}
+.tooltip {
+    padding: 6px;
+    color: var(--subtext0);
+    font-size: 12px;
+    background-color: rgba(20, 22, 23, 0.2);
+    border: 0px;
+    border-radius: 9px;
+}
+.wifi-widget .icon {
+    color: var(--subtext0);
+	min-width: 20px;
+}
+.wifi-widget {
+	background: rgba(0, 0, 0, 0.01);
+}
+.wifi-menu {
+    background-color: rgba(20, 22, 23, 0.4);
+    max-height: 350px;
+    min-height: 375px;
+    min-width: 375px;
+}
+.wifi-menu .progress-bar {
+    max-height: 2px;
+}
+.wifi-menu .progress-bar::chunk {
+    background-color: var(--main);
+}
+.wifi-menu .header {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 2px;
+    padding: 12px;
+    background-color: rgba(20, 22, 23, 0.4);
+    color: var(--text);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.wifi-menu .error-message {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    padding: 12px;
+    background-color: rgba(255, 0, 0, 0.2);
+	color: var(--text);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.wifi-menu .wifi-list {
+    background-color: rgba(20, 22, 23, 0.2);
+    margin-right: 3px;
+}
+.wifi-menu .wifi-item {
+    min-height: 35px;
+    padding: 2px 12px;
+    margin: 2px 4px;
+}
+.wifi-menu .wifi-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+}
+.wifi-menu .wifi-item[active=true] {
+    background-color: rgba(255, 255, 255, 0.15);
+    font-size: 14px;
+    border-radius: 6px;
+    min-height: 80px;
+}
+.wifi-menu .wifi-item[active=true]:hover {
+    background-color: rgba(255, 255, 255, 0.17);
+    font-size: 14px;
+    border-radius: 6px;
+    min-height: 80px;
+}
+.wifi-menu .wifi-item .icon {
+    font-family: 'Segoe Fluent Icons';
+    font-size: 26px;
+    margin-right: 10px;
+}
+.wifi-menu .wifi-item .name {
+    font-weight: bold;
+    color: var(--text);
+    font-size: 14px;
+    margin-right: 10px;
+}
+.wifi-menu .wifi-item .password {
+	font-family: 'Segoe UI';
+    background-color: transparent;
+    font-size: 14px;
+}
+.wifi-menu .wifi-item .status {
+    font-size: 14px;
+}
+.wifi-menu .wifi-item .strength {
+    font-size: 14px;
+}
+.wifi-menu .wifi-item .controls-container {
+    padding-top: 8px;
+}
+.wifi-menu .wifi-item .connect {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 4px 30px;
+    border-radius: 4px;
+    border: none;
+    font-size: 14px;
+    color: var(--text);
+}
+.wifi-menu .wifi-item .connect:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.wifi-menu .wifi-item .connect:pressed {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.wifi-menu .footer {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 12px;
+    margin-top: 2px;
+	background-color: rgba(20, 22, 23, 0.4);
+    color: var(--subtext0);
+}
+.wifi-menu .footer .settings-button {
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    padding: 0 2px;
+    min-width: 26px;
+    min-height: 26px;
+    color: var(--subtext0);
+}
+.wifi-menu .footer .settings-button:hover {
+	color: var(--subtext1);
+}
+.wifi-menu .footer .refresh-icon {
+    font-family: 'Segoe Fluent Icons';
+    background-color: transparent;
+    border: none;
+    min-width: 26px;
+    min-height: 26px;
+    color: var(--subtext0);
+}
+.wifi-menu .footer .refresh-icon:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+.volume-widget .icon {
+	background: rgba(0, 0, 0, 0.01);
+    color: var(--subtext0);
+	min-width: 18px;
+}
+.volume-widget .label {
+	color: var(--mainLight);
+	background: rgba(0, 0, 0, 0.01);
+    font-weight: bold;
+	min-width: 30px;
+} 
+.volume-slider {
+    border-radius: 2px;
+	border: none;
+	color: var(--main);
+	height: 5px;
+}
+.volume-slider::groove {
+    height: 5px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.1);
+}
+.volume-slider::handle{
+	color: var(--mainLight);
+	border-radius: 5px;
+    margin: -5px 0;
+	background: var(--blue);
+    width: 10px;
+    height: 10px;
+} 
+.volume-slider::groove:hover {
+    height: 5px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.2);
+}
+.audio-menu .volume-slider::sub-page {
+	background: rgba(125, 174, 163, 0.5);
+    border-radius: 2px;
+    height: 5px;
+}
+.audio-menu {
+    background-color:rgba(20, 22, 23, 0.5); 
+}
+.audio-container .device {
+	color: var(--text);
+    background-color: transparent;
+    border: none;
+    padding: 6px 8px 6px 4px;
+    margin: 2px 0;
+    font-size: 12px;
+	font-weight: bold;
+    border-radius: 4px;
+}
+.audio-container .device.selected {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.audio-container .device:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+.audio-container .device.selected:hover {
+	background-color: rgba(255, 255, 255, 0.17);
+}
+/* Container for application volumes (if is enabled) */
+.audio-menu .apps-container {
+    padding: 8px;
+    margin-top: 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.062)
+}
+.audio-menu .apps-container .app-volume .app-icon-container {
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 6px;
+    margin-right: 8px;
+}
+.audio-menu .apps-container .app-volume .app-slider {
+    border-radius: 2px;
+	border: none;
+	color: var(--main);
+	height: 5px;
+}
+.audio-menu .apps-container .app-volume .app-slider::groove {
+    height: 5px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.1);
+}
+.audio-menu .apps-container .app-volume .app-slider::handle{
+	color: var(--mainLight);
+	border-radius: 5px;
+    margin: -5px 0;
+    background: var(--blue);
+    width: 10px;
+    height: 10px;
+}
+.audio-menu .apps-container .app-volume .app-slider::groove:hover {
+    height: 5px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.2);
+}
+.audio-menu .apps-container .app-volume .app-slider::sub-page {
+	background: rgba(125, 174, 163, 0.5);
+    border-radius: 2px;
+    height: 5px;
+}
+.audio-menu .apps-container .app-volume .app-icon-container:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+/* Toggle button for application volumes (if is enabled) */
+.audio-menu .toggle-apps {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin-left: 5px;
+    min-height: 24px;
+    min-width: 24px;
+    border-radius: 4px;
+}
+.audio-menu .toggle-apps.expanded {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.audio-menu .toggle-apps:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    
+}
+.audio-menu .apps-container .app-volume .app-label {
+    color: var(--subtext0);
+	background: rgba(0, 0, 0, 0.01);
+    font-weight: bold;
+} /* Application label */
+/* LANGUAGE Settings */
+.language-widget .widget-container{
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+.language-widget .icon {
+	background: rgba(0, 0, 0, 0.01);
+    color: var(--subtext0);
+    margin-right: 4px;
+}
+.language-widget .label {
+	color: var(--subtext0);
+	background: rgba(0, 0, 0, 0.01);
+    font-weight: bold;
+} 
+.language-menu {
+	background-color: rgba(20, 22, 23, 0.5);
+    min-width: 300px;
+}
+.language-menu .header {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 2px;
+    padding: 12px;
+	color: var(--text);
+}
+.language-menu .footer {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 12px;
+    margin-top: 2px;
+    color: var(--subtext0);
+}
+.language-menu .footer:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+	color: var(--subtext0);
+}
+.language-menu .language-item {
+    padding: 6px 12px;
+    margin: 2px 4px;
+}
+.language-menu .language-item.active {
+    background-color:rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+}
+.language-menu .language-item:hover {
+    background-color:rgba(255, 255, 255, 0.05);
+	border-radius: 4px;
+}
+.language-menu .language-item.active:hover {
+    background-color:rgba(255, 255, 255, 0.17);
+    border-radius: 4px;
+}
+.language-menu .language-item .code {
+    font-weight: 900;
+    font-size: 14px;
+    min-width: 40px;
+    text-transform: uppercase;
+	color: var(--mainLight);
+}
+.language-menu .language-item .icon {
+    font-size: 16px;
+    margin-right: 8px;
+    color: var(--text);
+}
+.language-menu .language-item .name {
+    font-weight: 600;
+    font-size: 14px;
+	color: var(--text);
+}
+.language-menu .language-item .layout {
+    font-weight: 600;
+    font-size: 12px;
+	color: var(--subtext0);
 }

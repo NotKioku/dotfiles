@@ -35,7 +35,7 @@ bars:
       # center: ["clock","apps"]
       center: ["clock"]
       # right: ["update","ai","wallpapers","github","taskbar","weather","whkd","volume","power_menu"]
-      right: ["update","taskbar","weather","whkd","volume","battery","power_menu"]
+      right: ["taskbar","weather","language","wifi","volume","battery","power_menu"]
 widgets:
   update:
     type: "yasb.update_check.UpdateCheckWidget"
@@ -137,11 +137,29 @@ widgets:
         snowyNight: "\udb81\udd99"
         blizzardDay: "\udb81\udd99"
         default: "\udb81\udd99"
+  # volume:
+  #   type: "yasb.volume.VolumeWidget"
+  #   options:
+  #     label: "<span>{icon}</span> {level}"
+  #     label_alt: "{volume}"
+  #     volume_icons:
+  #       - "\ueee8"
+  #       - "\uf026"
+  #       - "\uf027"
+  #       - "\uf027"
+  #       - "\uf028"
+  #     callbacks:
+  #       on_right: "exec cmd.exe /c start ms-settings:sound"
   volume:
     type: "yasb.volume.VolumeWidget"
     options:
-      label: "<span>{icon}</span> {level}"
+      label: "<span>{icon}</span>"
       label_alt: "{volume}"
+      tooltip: false
+      animation:
+        enabled: true
+        duration: 200
+        type: "fadeInOut"
       volume_icons:
         - "\ueee8"
         - "\uf026"
@@ -149,7 +167,26 @@ widgets:
         - "\uf027"
         - "\uf028"
       callbacks:
+        on_left: "toggle_volume_menu"
+        on_middle: "exec cmd.exe /c start ms-settings:apps-volume"
         on_right: "exec cmd.exe /c start ms-settings:sound"
+      audio_menu:
+        blur: True
+        round_corners: True
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        distance: 6
+        show_apps: true # Whether to show the list of applications with audio sessions
+        show_app_labels: true # Whether to show application labels in the audio menu
+        show_app_icons: true # Whether to show application icons in the audio menu
+        show_apps_expanded: true # Whether application volumes are expanded by default when opening the menu
+      container_padding:
+        top: 0
+        left: 8
+        bottom: 0
+        right: 8
   power_menu:
     type: "yasb.power_menu.PowerMenuWidget"
     options:
@@ -202,6 +239,21 @@ widgets:
         processes: []
         titles: []
         classes: []
+      preview:
+        enabled: true
+        width: 240
+        delay: 400
+        padding: 8
+        margin: 8
+      callbacks:
+        on_left: "toggle_window"
+        on_middle: "close_app"
+        on_right: "context_menu"
+      title_label:
+        enabled: true
+        show: "focused"
+        min_length: 5
+        max_length: 15
   ai:
     type: "yasb.custom.CustomWidget"
     options:
@@ -259,3 +311,77 @@ widgets:
         icon_medium: "\uf242"
         icon_high: "\uf241"
         icon_full: "\uf240"
+  language:
+    type: "yasb.language.LanguageWidget"
+    options:
+      label: "<span>\uf11c</span>{lang[country_code]}"
+      update_interval: 1
+      callbacks:
+        on_left: "toggle_menu"
+        on_middle: "do_nothing"
+        on_right: "exec cmd.exe /c start ms-settings:keyboard"
+      language_menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "system"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        show_layout_icon: true
+        layout_icon: "\uf11c"
+      container_padding:
+        top: 0
+        left: 0
+        bottom: 0
+        right: 8
+  wifi:
+      type: "yasb.wifi.WifiWidget"
+      options:
+        label: "<span>{wifi_icon}</span>"
+        label_alt: "{wifi_name}"
+        update_interval: 5000
+        ethernet_icon: "\uf0ac"
+        ethernet_label_alt: "{ip_addr}"
+        animation:
+          enabled: true
+          duration: 200
+          type: "fadeInOut"
+        menu_config:
+          blur: true
+          round_corners: true
+          round_corners_type: "normal"
+          border_color: "System"
+          alignment: "right"
+          direction: "down"
+          offset_top: 6
+          offset_left: 0
+          wifi_icons_secured: [
+            "\ue670",
+            "\ue671",
+            "\ue672",
+            "\ue673",
+          ]
+          wifi_icons_unsecured: [
+            "\uec3c",
+            "\uec3d",
+            "\uec3e",
+            "\uec3f",
+          ]
+        callbacks:
+          on_left: "toggle_menu"
+          on_middle: "toggle_label"
+          on_right: "exec cmd.exe /c start ms-settings:network"
+        container_padding:
+          top: 0
+          left: 8
+          bottom: 0
+          right: 8
+        wifi_icons: [
+          "\udb82\udd2e",  # Icon for 0% strength
+          "\udb82\udd1f",  # Icon for 1-20% strength
+          "\udb82\udd22",  # Icon for 21-40% strength
+          "\udb82\udd25",  # Icon for 41-80% strength
+          "\udb82\udd28"   # Icon for 81-100% strength
+        ]
