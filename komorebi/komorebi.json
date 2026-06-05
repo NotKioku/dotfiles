@@ -7,43 +7,43 @@
   "default_container_padding": 3,
   "border": true,
   "border_implementation": "Windows",
-	"border_style": "System",
+  "border_style": "System",
   "border_width": 0,
   "border_offset": 0,
-	"border_colours": {
-		"single": "#89b4fa",
-		"stack": "#00ff99",
-		"floating": "#00ff99",
-		"monocle": "#f38ba8",
-		"unfocused": "#303030"
-	},
-	"mouse_follows_focus": true,
-	"transparency": false,
-	"transparency_alpha": 230,
-	"animation": {
-		"enabled": true,
-		"duration": 400,
-		"fps": 120,
-		"style": {
-			"movement": "EaseOutBack",
-			"transparency": "Linear"
-		}
-	},
+  "border_colours": {
+    "single": "#89b4fa",
+    "stack": "#00ff99",
+    "floating": "#00ff99",
+    "monocle": "#f38ba8",
+    "unfocused": "#303030"
+  },
+  "mouse_follows_focus": true,
+  "transparency": false,
+  "transparency_alpha": 230,
+  "animation": {
+    "enabled": true,
+    "duration": 400,
+    "fps": 120,
+    "style": {
+      "movement": "EaseOutBack",
+      "transparency": "Linear"
+    }
+  },
   "theme": {
     "palette": "Base16",
     "name": "Ashes",
     "unfocused_border": "Base03",
     "bar_accent": "Base0D"
   },
-	"stackbar": {
-		"height": 24,
-		"mode": "Never",
-		"label": "Title",
-		"tabs": {
-			"width": 200,
-			"font_size": 16
-		}
-	},
+  "stackbar": {
+    "height": 24,
+    "mode": "Never",
+    "label": "Title",
+    "tabs": {
+      "width": 200,
+      "font_size": 16
+    }
+  },
   "monitors": [
     {
       "workspaces": [
@@ -76,6 +76,38 @@
           "layout": "RightMainVerticalStack"
         }
       ]
+    }
+  ],
+  "ignore_rules": [
+    {
+      "kind": "Title",
+      "id": "osu!",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Title",
+      "id": "Riot Client",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Title",
+      "id": "VALORANT",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Title",
+      "id": "League of Legends",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Title",
+      "id": "MultiMC",
+      "matching_strategy": "Contains"
+    },
+    {
+      "kind": "Title",
+      "id": "Minecraft",
+      "matching_strategy": "Contains"
     }
   ]
 }
