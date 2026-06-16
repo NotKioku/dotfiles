@@ -82,7 +82,7 @@
     {
       "kind": "Title",
       "id": "osu!",
-      "matching_strategy": "Equals"
+      "matching_strategy": "Contains"
     },
     {
       "kind": "Title",
