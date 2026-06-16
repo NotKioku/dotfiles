@@ -234,11 +234,6 @@ widgets:
         on_left: "toggle_window"
         on_middle: "close_app"
         on_right: "context_menu"
-      title_label:
-        enabled: true
-        show: "focused"
-        min_length: 5
-        max_length: 15
   ai:
     type: "yasb.custom.CustomWidget"
     options:

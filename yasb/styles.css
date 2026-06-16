@@ -127,7 +127,6 @@
 	margin-bottom: 10px;
 	color: var(--surface2);
 	font-weight: 600;
- 
 }
 .power-menu-widget .label {
 	color: var(--pink);
@@ -238,6 +237,9 @@
 }
 .taskbar-widget .app-container.flashing {
     background-color: rgba(255, 106, 106, 0.63);
+}
+.taskbar-preview {
+	background-color: var(--crust);
 }
 .whkd-widget {
     padding: 0 6px 0 6px;
@@ -640,7 +642,7 @@
     height: 5px;
 }
 .audio-menu {
-    background-color:rgba(20, 22, 23, 0.5); 
+    background-color: var(--crust);
 }
 .audio-container .device {
 	color: var(--text);
@@ -746,7 +748,7 @@
     font-weight: bold;
 } 
 .language-menu {
-	background-color: rgba(20, 22, 23, 0.5);
+	background-color: var(--crust);
     min-width: 300px;
 }
 .language-menu .header {
