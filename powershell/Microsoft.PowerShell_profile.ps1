@@ -11,3 +11,5 @@ $ENV:KOMOREBI_CONFIG_HOME = "$HOME\.config\komorebi"
 $ENV:WHKD_CONFIG_HOME = "$HOME\.config\whkd"
 
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
+
+fastfetch

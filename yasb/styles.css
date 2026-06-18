@@ -239,7 +239,7 @@
     background-color: rgba(255, 106, 106, 0.63);
 }
 .taskbar-preview {
-	background-color: var(--crust);
+	background-color: rgba(20, 22, 23, 0.8);
 }
 .whkd-widget {
     padding: 0 6px 0 6px;
